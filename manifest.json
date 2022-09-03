@@ -1,0 +1,13 @@
+{
+    "name": "One2All",
+    "version": "0.1",
+    "manifest_version": 3,
+    "description": "An extension to make the web more gender-inclusive",
+    "content_scripts":[
+        {
+            "matches": ["*://*/*"],
+            "js": ["equality.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
