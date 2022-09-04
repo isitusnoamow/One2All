@@ -26,7 +26,9 @@ const equalityWords = [
     ["spokesman", "spokesperson"],
     ["spokeswoman", "spokesperson"],
     ["policeman", "police officer"],
-    ["policewoman", "police officer"]
+    ["policewoman", "police officer"],
+    ["like a girl", "like a person"],
+    ["like a man", "like a person"],
 ]
 let found = 0
 let total = 0
