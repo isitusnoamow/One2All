@@ -15,6 +15,16 @@ const equalityWords = [
     ["brother", "sibling"],
     ["mom", "parent"],
     ["dad", "parent"],
+    ["mailman", "mailperson"],
+    ["mailwoman", "mailperson"],
+    ["businessman", "businessperson"],
+    ["businesswoman", "businessperson"],
+    ["cameraman", "cameraperson"],
+    ["camerawoman", "cameraperson"],
+    ["spokesman", "spokesperson"],
+    ["spokeswoman", "spokesperson"],
+    ["policeman", "police officer"],
+    ["policewoman", "police officer"]
 ]
 
 function recursionText(element) {
