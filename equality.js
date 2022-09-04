@@ -15,6 +15,8 @@ const equalityWords = [
     ["brother", "sibling"],
     ["mom", "parent"],
     ["dad", "parent"],
+    ["son", "child"],
+    ["daughter", "child"],
     ["mailman", "mailperson"],
     ["mailwoman", "mailperson"],
     ["businessman", "businessperson"],
