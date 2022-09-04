@@ -26,6 +26,8 @@ const equalityWords = [
     ["policeman", "police officer"],
     ["policewoman", "police officer"]
 ]
+let found = 0
+let total = 0
 
 function recursionText(element) {
     if (/^(script|style)$/.test(element.tagName)) {
@@ -47,9 +49,23 @@ function equalize(node){
     let text = node.nodeValue;
     for(let i=0;i<equalityWords.length;i++){
         let regex = new RegExp("\\b" + equalityWords[i][0] + "\\b", "gi")
+        let matches = text.match(regex);
+        if(matches != null){
+            found += matches.length
+        }
         text = text.replace(regex, equalityWords[i][1])
     }
     node.nodeValue = text
 }
 
-recursionText(document.body)
+function main(){
+    recursionText(document.body)
+    chrome.storage.sync.set({ currentPage: found });
+    chrome.storage.sync.get(["everyPage"], function(result) {
+        total = result.everyPage ?? 0
+        total += found
+        chrome.storage.sync.set({ everyPage: total });
+    });
+} 
+
+main()
